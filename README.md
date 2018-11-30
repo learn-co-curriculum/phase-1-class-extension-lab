@@ -1,16 +1,45 @@
-# Title
+# JavaScript Class Extension Lab
 
 ## Learning Goals
 
--SWBAT 1
--SWBAT 2
+
+1. Reiterate what a `prototype` is in JavaScript
+2. Practice writing JavaScript `class`es that inherit from other `class`es
 
 ## Introduction
 
-## SWBAT 1
+In this lab we're going to create a geometry application that allows us
+to place various shapes on a plane and move them about. We'll be using
+_prototypal_ inheritance with JavaScripts `class` keyword to build
+`classes` that inherit from and _extend_ base objects.
 
-## SWBAT 2
+## Reiterate What a `prototype` is in JavaScript
 
-## Conclusion
+Remember that JavaScript `class`es are syntatic sugar over JavaScript's
+existing `prototype`-based inheritance. A `prototype` is just an object,
+and any properties and methods we add to an object's `prototype` will be
+available to all objects that inherit from that `prototype` via delegation.
+If a property or method isn't found on an object, then JavaScript will look
+at every object up the prototype chain until it is found (or not).
+
+Follow the instructions below to get your tests passing!
+
+## Practice Writing JavaScript `class`es That Inherit From Other `class`es
+
+1. Define a `Shape` `class`. This will be the base for all shapes.
+2. The `Shape` `class` will accept a single `length` parameter.
+3. Define a `Circle` object that inherits from `Shape` and is
+   constructed with the parameter that sets the `radius` property. Define
+   and implement functions on `Circle` to calculate `area()` and
+   `circumference()` based on the `radius`.
+4. Define a `Polygon` object that inherits from `Shape`. `Polygon` should be
+   constructed with an `Array` of `length` properties. Implement a function
+   called `perimeter()` that calculates the perimeter of any `Polygon` based
+   on the `length`s supplied in the `Array`. Implement a function called
+   `numberOfSides()` that returns the number of sides for the `Polygon`.
+5. Define a `Rectangle` object that inherits from `Polygon` and is
+   constructed with two integer arguments that sets a `width` and `height`
+   properties. Implement an `area()` function to calculate the area. `Rectangle`
+   should also have access to `perimeter()` and `numberOfSides()`.
 
 ## Resources
