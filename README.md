@@ -9,9 +9,9 @@
 ## Introduction
 
 In this lab we're going to create a geometry application that allows us
-to place various shapes on a plane and move them about. We'll be using
-_prototypal_ inheritance with JavaScripts `class` keyword to build
-`classes` that inherit from and _extend_ base objects.
+calculate different properties of a shape. We'll be using JavaScript's
+`class` keyword to build objects that inherit from and _extend_ base
+objects.
 
 ## Reiterate What a `prototype` is in JavaScript
 
@@ -29,17 +29,17 @@ Follow the instructions below to get your tests passing!
 1. Define a `Shape` `class`. This will be the base for all shapes.
 2. The `Shape` `class` will accept a single `length` parameter.
 3. Define a `Circle` object that inherits from `Shape` and is
-   constructed with the parameter that sets the `radius` property. Define
-   and implement functions on `Circle` to calculate `area()` and
+   constructed with a parameter that sets the `radius` property. Define
+   and implement methods on `Circle` to calculate `area()` and
    `circumference()` based on the `radius`.
 4. Define a `Polygon` object that inherits from `Shape`. `Polygon` should be
-   constructed with an `Array` of `length` properties. Implement a function
+   constructed with an `Array` of `length` properties. Implement a method
    called `perimeter()` that calculates the perimeter of any `Polygon` based
-   on the `length`s supplied in the `Array`. Implement a function called
+   on the `length`s supplied in the `Array`. Implement a method called
    `numberOfSides()` that returns the number of sides for the `Polygon`.
 5. Define a `Rectangle` object that inherits from `Polygon` and is
    constructed with two integer arguments that sets a `width` and `height`
-   properties. Implement an `area()` function to calculate the area. `Rectangle`
+   properties. Implement an `area()` method to calculate the area. `Rectangle`
    should also have access to `perimeter()` and `numberOfSides()`.
 
 ## Resources
