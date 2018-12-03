@@ -25,9 +25,8 @@ Follow the instructions below to get your tests passing!
 
 ## Practice Writing JavaScript `class`es That Inherit From Other `class`es
 
-1. Define a `Shape` `class`. This will be the base for all shapes.
-2. The `Shape` `class` will accept a single `length` parameter, which will
-represent one _side_ of the shape.
+1. Define a `Shape` `class`. The `Shape` `class` will accept a single `length`
+parameter, which will represent one _side_ of the shape.
 3. Define a `Triangle` `class` that inherits from `Shape`. Implement a `perimeter()`
 method that calculates the perimeter using the `length` property. It is an
 _equilateral_ triangle, meaning all sides are the same `length`.
@@ -37,7 +36,7 @@ _and_ `area()` methods that calculate these properties.
    constructed with *two* integer arguments that will set `width` and `height`
    properties. Implement `perimeter()` and `area()` methods that calculate these
    properties.
-6. Define a `Polygon` object that inherits from `Shape`. `Shape` is
+6. Define a `Polygon` object that inherits from `Shape`. `Polygon` is
    constructed with *two* integer arguments--a `length` and the number of sides.
    That will set `length` and `sides` properties. Implement a `perimeter()` methods
    that calculate this property.
