@@ -1,23 +1,25 @@
-
-
-describe("index.html", () => {
-  it("includes 'hello'", () => {
-    expect(document.querySelector('body').innerHTML).to.include('hello')
+describe("Shape", () => {
+  it("has a Shape class", () => {
+    expect(Shape).to.exist
   })
+})
 
-  it("includes div", () => {
-    expect(document.querySelector('body').innerHTML, "no empty div element found within body").to.include('<div></div>')
+describe("Triangle", () => {
+  it("has a Triangle class", () => {
+    expect(Triangle).to.exist
   })
-
-
 })
 
 
-describe("index.js", () => {
-  it("exists", () => {
-    expect(testVar).to.exist
-    expect(testVar).to.deep.equal({}) //without .deep, {} does not equal {}
-    expect(testFunc).to.exist
-    expect(testFunc()).to.equal('hi')
+describe("Square", () => {
+  it("has a Square class", () => {
+    expect(Square).to.exist
+  })
+})
+
+
+describe("Polygon", () => {
+  it("has a Polygon class", () => {
+    expect(Polygon).to.exist
   })
 })
