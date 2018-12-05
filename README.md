@@ -10,19 +10,28 @@ In this lab we're going to create a geometry application that allows us
 calculate different properties of multiple shape. We'll be using JavaScript's
 `class` keyword to build objects that inherit from its base object.
 
-## Practice Writing JavaScript `class`es That Inherit From Other Classes
+## Practice Writing JavaScript classes That Inherit From Other Classes
 
-1. Define a `Shape` `class`. The `Shape` `class` will accept a single `length`
-parameter, which will represent one _side_ of the shape.
-2. Define a `Triangle` `class` that inherits from `Shape`. Implement a `perimeter()`
-method that calculates a perimeter using the `length` property inherited from `Shape`.
-3. Define a `Square` object that inherits from `Shape`. Implement `perimeter()`
-_and_ `area()` methods that calculate these properties using the `length` property
-inherited from `Shape`.
-4. Define a `Polygon` object that inherits from `Shape`. `Polygon` is
-   constructed with *two* integer arguments--a `length` and the number of sides.
-   That will set `length` and `sides` properties on the constructor. Implement a
-   `perimeter()` method that calculates the perimeter from these properties.
+1. Define a `Polygon` class. `Polygon` will accept an `Array` with parameter
+with integers, which will represent each _side_ of a shape. Implement a `get`
+method called `getCount()` that counts the number of sides (each index in the array).
+Now, implement a `perimeter()` method that calculates the perimeter from each index
+in the given array. This method will become accessible to its child classes.
+
+2. Define a `Triangle` class that inherits from `Polygon`. It has access to calculate
+`perimeter()` inherited from `Polygon`. Implement an `isValid()` method that checks if
+the the given 3 sides for a triangle is valid.
+
+> The sum of the lengths of any two sides of a triangle is greater than the length of
+the third side. If you take the three sides of a triangle and add them in pairs, the sum
+is greater than (not equal to) the third side. If that is not true, then it is not possible
+to construct a triangle with the given side lengths.
+
+3. Define a `Square` object that inherits from `Polygon`. It has access to calculate
+`perimeter()` inherited from `Polygon`. Implement an `isValid()` method that checks if
+the the given 4 sides for a square is valid. A square is valid when the lengths of all sides
+are equal. Implement the method `area()` that calculates the area of the square.
+
 
 ## Resources
 
