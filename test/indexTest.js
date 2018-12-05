@@ -1,11 +1,29 @@
-describe("Shape", () => {
-  it("has a Shape class", () => {
-    expect(Shape).to.exist
-  })
-  it("Shape has a length property", () => {
-    var shape = new Shape(5)
+let circle;
+let triangle;
+let square;
 
-    expect(shape.length).to.equal(5)
+
+
+describe("Polygon", () => {
+  beforeEach( () => {
+    polygon = new Polygon([5,5,5])
+  } )
+
+  it("has a Polygon class", () => {
+    expect(Polygon).to.exist
+  })
+  it("Polygon has a sides property", () => {
+    expect(polygon.sides).to.have.all.members([5,5,5])
+  })
+  it("Polygon has a getCount() method that counts the sides of the polygon", () => {
+    expect(polygon.getCount).to.exist
+    expect(polygon.getCount).to.eq(3)
+  })
+  it("Polygon has a setCount() method that sets the count of the sides of the polygon", () => {
+    expect(polygon.count).to.eq(3)
+  })
+  it("Polygon has a perimeter() method that calculates perimeter", () => {
+    expect(polygon.perimeter()).to.eq(15)
   })
 })
 
@@ -14,10 +32,13 @@ describe("Triangle", () => {
     expect(Triangle).to.exist
   })
 
-  it("Shape calculates the perimeter", () => {
-    var triangle = new Triangle(5)
+  it("Triangle checks for valid triangle", () => {
+    var triangle = new Triangle([5,5,5])
+    var triangle2 = new Triangle([15,10,1])
 
-    expect(triangle.perimeter()).to.equal(15)
+    expect(triangle.count).to.eq(3)
+    expect(triangle.isValid()).to.be.true
+    expect(triangle2.isValid()).to.be.false
   })
 })
 
@@ -28,27 +49,14 @@ describe("Square", () => {
   })
 
   it("Square calculates the perimeter", () => {
-    var square = new Square(5)
+    var square = new Square([5,5,5,5])
 
-    expect(square.perimeter()).to.equal(20)
+    expect(square.perimeter()).to.eq(20)
   })
 
   it("Square calculates the area", () => {
-    var square = new Square(5)
+    var square = new Square([5,5,5,5])
 
-    expect(square.area()).to.equal(25)
-  })
-})
-
-
-describe("Polygon", () => {
-  it("has a Polygon class", () => {
-    expect(Polygon).to.exist
-  })
-
-  it("Polygon calculates the perimeter", () => {
-    var polygon = new Polygon(5, 10)
-
-    expect(polygon.perimeter()).to.equal(50)
+    expect(square.area()).to.eq(25)
   })
 })
