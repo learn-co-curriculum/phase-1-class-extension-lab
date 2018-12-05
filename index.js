@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Polygon {
   constructor( sides ) {
     this.sides = sides
@@ -48,3 +49,6 @@ class Square extends Polygon {
     return this.sides[ 0 ] * this.sides[ 0 ]
   }
 }
+=======
+// Your code here
+>>>>>>> index.js
