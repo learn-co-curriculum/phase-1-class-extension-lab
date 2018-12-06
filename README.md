@@ -1,45 +1,39 @@
-# JavaScript Class Extension Lab
+# JavaScript Class Extension Lab: `extends`
 
 ## Learning Goals
 
-1. Reiterate what a `prototype` is in JavaScript
-2. Practice writing JavaScript `class`es that inherit from other `class`es
+1. Practice writing JavaScript classes that inherit from other classes
 
 ## Introduction
 
-In this lab we're going to create a geometry application that allows us
-calculate different properties of a shape. We'll be using JavaScript's
-`class` keyword to build objects that inherit from and _extend_ base
-objects.
+In this lab we're going to create a geometry application that allows us to
+calculate different properties of multiple shape. We'll be using JavaScript's
+`class` keyword to build objects that inherit from its base object.
 
-## Reiterate What a `prototype` is in JavaScript
+## Practice Writing JavaScript classes That Inherit From Other Classes
 
-Remember that JavaScript `class`es are syntatic sugar over JavaScript's
-existing `prototype`-based inheritance. A `prototype` is just an object,
-and any properties and methods we add to an object's `prototype` will be
-available to all objects that inherit from that `prototype` via _delegation_.
-This mean, if a property or method isn't found on an object, then JavaScript
-will look at every object up the prototype chain until it is found (or not).
+1. Define a `Polygon` class. `Polygon` will accept an `Array` of integers as a
+paremeter, which will represent each _side_ of a shape. 
+* Implement a `get` method called `getCount()` that counts the number of sides
+(each index in the array). 
+* Now, implement a `perimeter()` method that calculates the perimeter from each
+index in the given array. This method will become accessible to its child classes.
 
-Follow the instructions below to get your tests passing!
+2. Define a `Triangle` class that inherits from `Polygon`. It has access to calculate
+`perimeter()` inherited from `Polygon`. Implement an `isValid()` method that checks if
+the the given 3 sides for a triangle is valid.
 
-## Practice Writing JavaScript `class`es That Inherit From Other `class`es
+> The sum of the lengths of any two sides of a triangle is greater than the length of
+the third side. If you take the three sides of a triangle and add them in pairs, the sum
+is greater than (not equal to) the third side. If that is not true, then it is not possible
+to construct a triangle with the given side lengths.
 
-1. Define a `Shape` `class`. The `Shape` `class` will accept a single `length`
-parameter, which will represent one _side_ of the shape.
-3. Define a `Triangle` `class` that inherits from `Shape`. Implement a `perimeter()`
-method that calculates the perimeter using the `length` property. It is an
-_equilateral_ triangle, meaning all sides are the same `length`.
-4. Define a `Square` object that inherits from `Shape`. Implement `perimeter()`
-_and_ `area()` methods that calculate these properties.
-5. Define a `Rectangle` object that inherits from `Shape`. `Rectangle` is
-   constructed with *two* integer arguments that will set `width` and `height`
-   properties. Implement `perimeter()` and `area()` methods that calculate these
-   properties.
-6. Define a `Polygon` object that inherits from `Shape`. `Polygon` is
-   constructed with *two* integer arguments--a `length` and the number of sides.
-   That will set `length` and `sides` properties. Implement a `perimeter()` methods
-   that calculate this property.
+3. Define a `Square` class that inherits from `Polygon`. It has access `perimeter()`
+inherited from `Polygon`. 
+* Implement an `isValid()` method that checks if the the given 4 sides for a square is
+valid. A square is valid when the lengths of all sides are equal. 
+* Implement the method `area()` that calculates the area of the square.
+
 
 ## Resources
 
