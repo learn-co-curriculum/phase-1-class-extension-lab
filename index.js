@@ -8,7 +8,7 @@ class Polygon {
     return this.sides.length
   }
 
-  perimeter(){
+  get perimeter(){
     if(!Array.isArray(this.sides)) return;
     let sum = 0;
     for (var int of this.sides) {
@@ -20,7 +20,7 @@ class Polygon {
 
 class Triangle extends Polygon{
 
-  isValid() {
+  get isValid() {
     if(!Array.isArray(this.sides)) return;
     if(this.count !== 3) return;
     let side1 = this.sides[0]
@@ -32,7 +32,7 @@ class Triangle extends Polygon{
 
 class Square extends Polygon {
 
-  isValid() {
+  get isValid() {
     if(!Array.isArray(this.sides)) return;
     if(this.count !== 4) return;
     let side1 = this.sides[0]
