@@ -20,7 +20,7 @@ describe( "Polygon", () => {
     expect( polygon.count ).to.exist
     expect( polygon.count ).to.eq( 3 )
   } )
-  
+
   it( "Polygon has a count setter method that sets the count of the sides of the polygon", () => {
     expect( polygon.count ).to.eq( 3 )
   } )
@@ -31,13 +31,15 @@ describe( "Polygon", () => {
 } )
 
 describe( "Triangle", () => {
+  let triangle
+  let triangle2
   it( "has a Triangle class", () => {
     expect( Triangle ).to.exist
   } )
 
   it( "checks for valid triangle", () => {
-    var triangle = new Triangle( [ 5, 5, 5 ] )
-    var triangle2 = new Triangle( [ 15, 10, 1 ] )
+    triangle = new Triangle( [ 5, 5, 5 ] )
+    triangle2 = new Triangle( [ 15, 10, 1 ] )
 
     expect( triangle.count ).to.eq( 3 )
 
@@ -46,7 +48,8 @@ describe( "Triangle", () => {
   } )
 
   it( "has a perimeter getter inherited from Polygon", () => {
-    expect( polygon.perimeter ).to.eq( 15 )
+    expect( triangle.perimeter ).to.eq( 15 )
+    expect( triangle2.perimeter ).to.eq( 26 )
   } )
 } )
 
