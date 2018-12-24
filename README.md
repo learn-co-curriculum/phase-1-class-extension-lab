@@ -28,7 +28,7 @@ the third side. If you take the three sides of a triangle and add them in pairs,
 is greater than (not equal to) the third side. If that is not true, then it is not possible
 to construct a triangle with the given side lengths.
 
-3. Define a `Square` class that inherits from `Polygon`. It has access to `perimeter()`
+3. Define a `Square` class that inherits from `Polygon`. It has access to `perimeter`
 inherited from `Polygon`. 
 * Implement a getter method `isValid` that checks if the the given 4 sides for a square is
 valid. A square is valid when the lengths of all sides are equal. 
