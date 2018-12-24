@@ -12,17 +12,9 @@ describe( "Polygon", () => {
   it( "has a Polygon class", () => {
     expect( Polygon ).to.exist
   } )
-  it( "Polygon has a sides property", () => {
-    expect( polygon.sides ).to.have.all.members( [ 5, 5, 5 ] )
-  } )
 
-  it( "Polygon has a count getter that counts the sides of the polygon", () => {
-    expect( polygon.count ).to.exist
-    expect( polygon.count ).to.eq( 3 )
-  } )
-
-  it( "Polygon has a count setter method that sets the count of the sides of the polygon", () => {
-    expect( polygon.count ).to.eq( 3 )
+  it( "Polygon has a count getter method that sets the count of the sides of the polygon", () => {
+    expect( polygon.getCount ).to.eq( 3 )
   } )
 
   it( "Polygon has a perimeter getter that calculates perimeter", () => {
