@@ -33,7 +33,7 @@ describe( "Triangle", () => {
     triangle = new Triangle( [ 5, 5, 5 ] )
     triangle2 = new Triangle( [ 15, 10, 1 ] )
 
-    expect( triangle.count ).to.eq( 3 )
+    expect( triangle.getCount ).to.eq( 3 )
 
     expect( triangle.isValid ).to.be.true
     expect( triangle2.isValid ).to.be.false
@@ -67,7 +67,7 @@ describe( "Square", () => {
     var square = new Square( [ 5, 5, 5, 5 ] )
     var square2 = new Square( [ 5, 4, 3, 2 ] )
 
-    expect( square.count ).to.eq( 4 )
+    expect( square.getCount ).to.eq( 4 )
     expect( square.isValid ).to.be.true
     expect( square2.isValid ).to.be.false
   } )
