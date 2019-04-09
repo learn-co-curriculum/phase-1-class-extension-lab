@@ -14,12 +14,12 @@ calculate different properties of multiple shape. We'll be using JavaScript's
 
 1. Define a `Polygon` class. `Polygon` will accept an `Array` of integers as a
 paremeter, which will represent each _side_ of a shape. 
-* Use the `get` keyword to make a getter method `getCount() {}` that counts the number of sides (each index in the array).
-* Now, implement a getter method called `perimeter` that calculates the sum of each side (each index in the array) of the polygon.
+* Use the `get` keyword to make a getter method `count` that counts the number of sides (each index in the array).
+* Use the `get` keyword to make a getter method `perimeter` that calculates the sum of each side (each index in the array) of the polygon.
  This method will become accessible to its child classes.
 
-1. Define a `Triangle` class that inherits from `Polygon`. It has access to calculate
-`perimeter` inherited from `Polygon`. Implement a getter method `isValid` that checks if
+2. Define a `Triangle` class that inherits from `Polygon`. It has access to calculate
+`perimeter` inherited from `Polygon`. Use the get keyword to make a getter method `isValid` that checks if
 the the given 3 sides for a triangle is valid.
 
 > The sum of the lengths of any two sides of a triangle is greater than the length of
@@ -29,9 +29,9 @@ to construct a triangle with the given side lengths.
 
 3. Define a `Square` class that inherits from `Polygon`. It has access to `perimeter`
 inherited from `Polygon`. 
-* Implement a getter method `isValid` that checks if the the given 4 sides for a square is
+* Use the `get` keyword to make a getter method `isValid` that checks if the the given 4 sides for a square is
 valid. A square is valid when the lengths of all sides are equal. 
-* Implement a getter method `area` that calculates the area of the square.
+* Use the `get` keyword to make a getter method `area` that calculates the area of the square.
 
 
 ## Resources
