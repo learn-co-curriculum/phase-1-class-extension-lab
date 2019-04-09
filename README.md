@@ -14,12 +14,11 @@ calculate different properties of multiple shape. We'll be using JavaScript's
 
 1. Define a `Polygon` class. `Polygon` will accept an `Array` of integers as a
 paremeter, which will represent each _side_ of a shape. 
-* Implement a getter method called `getCount` that counts the number of sides
-(each index in the array). 
-* Now, implement a getter method called `perimeter` method that calculates the perimeter from each
-index in the given array. This method will become accessible to its child classes.
+* Use the `get` keyword to make a getter method `getCount() {}` that counts the number of sides (each index in the array).
+* Now, implement a getter method called `perimeter` that calculates the sum of each side (each index in the array) of the polygon.
+ This method will become accessible to its child classes.
 
-2. Define a `Triangle` class that inherits from `Polygon`. It has access to calculate
+1. Define a `Triangle` class that inherits from `Polygon`. It has access to calculate
 `perimeter` inherited from `Polygon`. Implement a getter method `isValid` that checks if
 the the given 3 sides for a triangle is valid.
 
@@ -38,3 +37,4 @@ valid. A square is valid when the lengths of all sides are equal.
 ## Resources
 
 * [Understanding Prototypes, Delegation & Composition](https://www.datchley.name/understanding-prototypes-delegation-composition/)
+* [Understanding Getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
