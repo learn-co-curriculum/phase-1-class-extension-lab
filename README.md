@@ -7,7 +7,7 @@
 ## Introduction
 
 In this lab we're going to create a geometry application that allows us to
-calculate different properties of multiple shape. We'll be using JavaScript's
+calculate different properties of multiple shapes. We'll be using JavaScript's
 `class` keyword to build objects that inherit from its base object.
 
 ## Practice Writing JavaScript classes That Inherit From Other Classes
