@@ -14,7 +14,7 @@ describe( "Polygon", () => {
   } )
 
   it( "Polygon has a count getter method that returns the number of sides of the polygon", () => {
-    expect( polygon.getCount ).to.eq( 3 )
+    expect( polygon.countSides ).to.eq( 3 )
   } )
 
   it( "Polygon has a perimeter getter that calculates perimeter", () => {
@@ -33,7 +33,7 @@ describe( "Triangle", () => {
     triangle = new Triangle( [ 5, 5, 5 ] )
     triangle2 = new Triangle( [ 15, 10, 1 ] )
 
-    expect( triangle.getCount ).to.eq( 3 )
+    expect( triangle.countSides ).to.eq( 3 )
 
     expect( triangle.isValid ).to.be.true
     expect( triangle2.isValid ).to.be.false
@@ -67,7 +67,7 @@ describe( "Square", () => {
     var square = new Square( [ 5, 5, 5, 5 ] )
     var square2 = new Square( [ 5, 4, 3, 2 ] )
 
-    expect( square.getCount ).to.eq( 4 )
+    expect( square.countSides ).to.eq( 4 )
     expect( square.isValid ).to.be.true
     expect( square2.isValid ).to.be.false
   } )
