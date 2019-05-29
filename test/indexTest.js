@@ -13,7 +13,7 @@ describe( "Polygon", () => {
     expect( Polygon ).to.exist
   } )
 
-  it( "Polygon has a count getter method that returns the number of sides of the polygon", () => {
+  it( "Polygon has a countSides getter method that returns the number of sides of the polygon", () => {
     expect( polygon.countSides ).to.eq( 3 )
   } )
 
