@@ -52,20 +52,20 @@ describe( "Square", () => {
   } )
 
   it( "has a perimeter getter inherited from Polygon", () => {
-    var square = new Square( [ 5, 5, 5, 5 ] )
+    let square = new Square( [ 5, 5, 5, 5 ] )
 
     expect( square.perimeter ).to.eq( 20 )
   } )
 
   it( "calculates the area", () => {
-    var square = new Square( [ 5, 5, 5, 5 ] )
+    let square = new Square( [ 5, 5, 5, 5 ] )
 
     expect( square.area ).to.eq( 25 )
   } )
 
   it( "checks for valid square", () => {
-    var square = new Square( [ 5, 5, 5, 5 ] )
-    var square2 = new Square( [ 5, 4, 3, 2 ] )
+    let square = new Square( [ 5, 5, 5, 5 ] )
+    let square2 = new Square( [ 5, 4, 3, 2 ] )
 
     expect( square.countSides ).to.eq( 4 )
     expect( square.isValid ).to.be.true
