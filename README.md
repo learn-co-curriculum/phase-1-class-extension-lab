@@ -1,4 +1,4 @@
-# JavaScript Class Extension Lab: `extends`
+# Class Extension Lab
 
 ## Learning Goals
 
